@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="awesome_tshirt.ImagePreviewField" owl="1">
         <CharField t-props="props"/>
-        <img t-att-src="props.value"/>
+        <t t-if="props.value">
+            <img t-att-src="props.value"/>
+        </t>
+        <t t-else="">
+            <span style="color:red">MISSING IMAGE URL FIELD</span>
+        </t>
     </t>
 </templates>
