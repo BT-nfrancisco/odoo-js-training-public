@@ -6,11 +6,13 @@
       <field name="name">awesome_tshirt.orders.form</field>
       <field name="model">awesome_tshirt.order</field>
       <field name="arch" type="xml">
-        <form>
+        <form js_class="order_form_view">
           <header>
             <field name="state" widget="statusbar" clickable="1"/>
           </header>
           <sheet>
+<!--            Only works in form view probably for now-->
+            <widget name="warning_box"/>
             <group>
               <group>
                 <field name="customer_id"/>

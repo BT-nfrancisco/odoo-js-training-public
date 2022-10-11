@@ -1,0 +1,9 @@
+<templates xml:space="preserve">
+    <t t-name="OrderFormView.buttons" t-inherit="web.FormView" t-inherit-mode="primary" owl="1">
+        <xpath expr="//t[@t-set-slot='control-panel-create-button']" position="inside">
+            <button type="button" class="btn btn-primary" t-on-click="debouncedPrintLabel">
+                    New Button
+            </button>
+        </xpath>
+    </t>
+</templates>
